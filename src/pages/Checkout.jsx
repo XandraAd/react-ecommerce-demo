@@ -10,11 +10,10 @@ import {
   Input,
 } from "@chakra-ui/react";
 import { Field, Form, Formik } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import ProductImage from "../assets/image-product-1.jpg"
-import Navigation from "../components/Navigation";
 
 function Checkout() {
   const state = useSelector((state) => {
@@ -83,7 +82,6 @@ function Checkout() {
 
   return (
     <>
-      <Navigation/>
       <Container
         className="bg-body-tertiary py-5 py-lg-0 d-flex flex-column justify-content-center align-items-center min-vh-100"
         fluid
