@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProductCard from "../components/shared/product-cart/ProductCard";
 import { Carousel } from "react-responsive-carousel";
 import NikeWhite from "../assets/sneaker_images/carouselImages/nik-white.jpg";
@@ -15,7 +16,7 @@ function Home() {
           <p className="legend">Image 1</p>
         </div>
         <div>
-          <img src={NikeWhite} alt="sofa" />
+          <img src={NikeWhite} alt="" />
           <p className="legend">Image 2</p>
         </div>
         <div>
