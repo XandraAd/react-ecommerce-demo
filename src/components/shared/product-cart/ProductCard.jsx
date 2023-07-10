@@ -8,7 +8,7 @@ function ProductCard({
   newPrice,
   shoeDescription,
   shoeBrand,
-  showCardFooter,
+  showCardFooter = true,
   brandIcon,
   imgSrc,
   imgWidth,
