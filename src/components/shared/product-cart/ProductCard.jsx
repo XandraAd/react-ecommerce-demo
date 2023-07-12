@@ -15,42 +15,49 @@ function ProductCard({
   imgHeight,
   showBorderRadius,
   showBrandText,
+  brandImage,
+  showBrandImage,
+  brandWidth
 }) {
   return (
     <>
       <Card
         shadow={"lg"}
         _hover={{ cursor: "pointer" }}
-        ml={5}
         borderRadius={showBorderRadius ? "xl" : "none"}
         overflow={"hidden"}
         width={imgWidth}
+        position="relative"
       >
-        <CardBody p={0} position="relative">
+        <CardBody p={0}>
           <Box height={imgHeight}>
             <Image src={imgSrc} alt="/" w="full" h="full" objectFit="cover" />
           </Box>
           {showBrandText && (
-            <Text
-              position="absolute"
-              top={"45%"}
-              w="full"
-              py={2}
-              color={"whiteAlpha.900"}
-              fontSize={"xl"}
-              boxShadow={"xl"}
-              backgroundColor="rgba(150, 150, 150, 0.365)"
-              gap={2}
-              style={{
-                backdropFilter: "blur(5px)",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              {brandIcon}
-              {shoeBrand}
-            </Text>
+            <>
+              <Box
+                position="absolute"
+                bottom={"0"}
+                w="full"
+                py={2}
+                color={"blackAlpha.900"}
+                fontSize={"xl"}
+                boxShadow={"xl"}
+                fontWeight={"bold"}
+                backgroundColor="rgba(150, 150, 150, 0.365)"
+                gap={2}
+                style={{
+                  backdropFilter: "blur(5px)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {brandIcon}
+                {shoeBrand}
+                {showBrandImage && <img src={brandImage} alt="/" width={brandWidth}/>}
+              </Box>
+            </>
           )}
         </CardBody>
         {showCardFooter && (

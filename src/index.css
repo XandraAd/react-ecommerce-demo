@@ -57,4 +57,24 @@ body {
     background-color: var(--bg-orange-50);
 }
 
+.popular-brands-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.customNavigationTarget .swiper-button-prev, .customNavigationTarget .swiper-button-next  {
+    top: 0%;
+    width: fit-content;
+    margin-top: 0;
+    color: var(--text-orange);
+}
+
+.customNavigationTarget .swiper-button-prev {
+    left: 95% !important;
+}
+.customNavigationTarget .swiper-button-prev::after, .customNavigationTarget .swiper-button-next::after  {
+    font-size: 1rem;
+}
+
 

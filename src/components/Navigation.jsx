@@ -13,7 +13,7 @@ function Navigation() {
   });
   return (
     <>
-      <Box maxWidth={1110} marginInline={"auto"}>
+      <Box maxWidth={1240} marginInline={"auto"}>
         <Navbar collapseOnSelect expand="lg" fluid="md" className="bg-transparent">
           <Container>
             <Navbar.Brand as={Link} to="/" className="fw-bold">
