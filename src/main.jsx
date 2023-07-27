@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { store } from './store/store.js'
 import { Provider } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'swiper/css/navigation';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

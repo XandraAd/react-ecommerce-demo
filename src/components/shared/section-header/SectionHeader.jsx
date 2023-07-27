@@ -5,13 +5,12 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { GiConverseShoe } from "react-icons/gi";
 
-function SectionHeader({ sectionTitle, showSectionIcon }) {
+function SectionHeader({ sectionTitle }) {
   return (
     <>
-      <Flex align={"center"} gap={3}>
-        <Text className="fs-4 mb-0">{sectionTitle}</Text>
-        {showSectionIcon && <GiConverseShoe fontSize={"1.75rem"} />}
-      </Flex>
+      <Box>
+        <Text className="fs-1 mb-0 text-black-50 ps-5">{sectionTitle}</Text>
+      </Box>
     </>
   );
 }

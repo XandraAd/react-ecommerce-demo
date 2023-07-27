@@ -9,53 +9,55 @@ function ProductCard({
   shoeDescription,
   shoeBrand,
   showCardFooter = true,
-  brandIcon,
   imgSrc,
-  imgWidth,
   imgHeight,
   showBorderRadius,
   showBrandText,
-  brandImage,
-  showBrandImage,
-  brandWidth
+  cardWidth,
+  baseCardWidth,
+  objectPosition,
+  shoeDetail,
+  showHoverBorder,
+  showBorder,
+  imgBoxMargin
 }) {
   return (
     <>
       <Card
-        shadow={"lg"}
-        _hover={{ cursor: "pointer" }}
+        shadow={"none"}
+        _hover={{ cursor: "pointer", border: showHoverBorder ? "2px solid #ff7d1a6b" : "none" }}
         borderRadius={showBorderRadius ? "xl" : "none"}
+        border= { showBorder ? "2px solid transparent" : "none" }
         overflow={"hidden"}
-        width={imgWidth}
         position="relative"
+        marginBlock="3rem"
+        width={{base: baseCardWidth, md: cardWidth}}
       >
         <CardBody p={0}>
-          <Box height={imgHeight}>
-            <Image src={imgSrc} alt="/" w="full" h="full" objectFit="cover" />
+          <Box height={imgHeight} w="full" mb={imgBoxMargin}>
+            <Image
+              src={imgSrc}
+              alt="/"
+              w="full"
+              h="full"
+              objectFit="cover"
+              objectPosition={objectPosition}
+            />
           </Box>
           {showBrandText && (
             <>
               <Box
                 position="absolute"
-                bottom={"0"}
+                bottom="0"
                 w="full"
-                py={2}
-                color={"blackAlpha.900"}
-                fontSize={"xl"}
-                boxShadow={"xl"}
-                fontWeight={"bold"}
-                backgroundColor="rgba(150, 150, 150, 0.365)"
-                gap={2}
-                style={{
-                  backdropFilter: "blur(5px)",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+                height="4rem"
+                mb="3"
+                px="5"
+                color="blackAlpha.900"
+                fontSize="sm"
               >
-                {brandIcon}
-                {shoeBrand}
-                {showBrandImage && <img src={brandImage} alt="/" width={brandWidth}/>}
+                <span className="text-orange">{shoeBrand}</span><br/>
+                <span className="text-muted">{shoeDetail}</span>
               </Box>
             </>
           )}

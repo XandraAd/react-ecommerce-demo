@@ -2,33 +2,41 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import NikeWhite from "../../assets/sneaker_images/carouselImages/nik-white.jpg";
-import AirJordon from "../../assets/sneaker_images/carouselImages/nike-jordan-university-blue.png";
-import Adidas from "../../assets/sneaker_images/carouselImages/adidas-campus-green.png";
-import { Box, Center } from "@chakra-ui/react";
+import NikeRed from "/sneaker_images/carouselImages/nike-red.jpg";
+import Converse from "/sneaker_images/carouselImages/converse.jpg";
+import Jordan from "/sneaker_images/carouselImages/jordans-nude.jpg";
+import NewBalance from "/sneaker_images/carouselImages/newbalance.jpg";
+import { Box, Flex, Image } from "@chakra-ui/react";
 
 const CarouselSection = () => {
   return (
     <>
-      <Center>
+      <Flex wrap={{base: "wrap", md:"nowrap"}}>
         <Box w={{ lg: "50vw" }}>
-          <Carousel autoPlay infiniteLoop showThumbs={false}>
-            <div>
-              <img src={Adidas} alt="" />
-              <p className="legend">Image 1</p>
-            </div>
-            <div className="carousel-container">
-              <img src={NikeWhite} alt="" />
-              <p className="legend">Image 2</p>
-            </div>
-            <div>
-              <img src={AirJordon} alt="showroom display" />
-              <p className="legend">Image 3</p>
-            </div>
+          <Carousel autoPlay infiniteLoop showThumbs={false} showArrows={false} showIndicators={false}>
+            <Box>
+              <Image src={NikeRed} alt=""/>
+            </Box>
+            <Box>
+              <Image src={NewBalance} alt="/" h="full"/>
+            </Box>
           </Carousel>
         </Box>
-      </Center>
-      <style>
+        <Box w={{ lg: "50vw" }}>
+          <Carousel autoPlay infiniteLoop showThumbs={false} showArrows={false} showIndicators={false}>
+            <Box>
+              <Image src={Jordan} alt="/" h="full"/>
+            </Box>
+            <Box>
+              <Image src={Converse} alt=""/>
+            </Box>
+            {/* <Box>
+              <Image src={NikeRed} alt=""/>
+            </Box> */}
+          </Carousel>
+        </Box>
+    </Flex>
+    <style>
         {`
             .carousel .carousel-status {
               display: none;

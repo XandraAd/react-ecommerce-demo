@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Kumbh Sans', sans-serif !important;
+    background-color: rgba(242, 242, 242, 0.722) !important;
 }
 
 .text-orange {
@@ -68,13 +69,26 @@ body {
     width: fit-content;
     margin-top: 0;
     color: var(--text-orange);
+    padding: 10px 16px;
 }
 
 .customNavigationTarget .swiper-button-prev {
-    left: 95% !important;
+    left: 90% !important;
 }
 .customNavigationTarget .swiper-button-prev::after, .customNavigationTarget .swiper-button-next::after  {
-    font-size: 1rem;
+    font-size: 1.25rem;
+}
+
+.customNavigationTarget .swiper-button-prev:hover, .customNavigationTarget .swiper-button-next:hover  {
+    background-color: rgba(255, 151, 113, 0.174);
+    padding: 10px 16px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    .customNavigationTarget .swiper-button-prev, .customNavigationTarget .swiper-button-next {
+        display: none!important
+    }
 }
 
 
