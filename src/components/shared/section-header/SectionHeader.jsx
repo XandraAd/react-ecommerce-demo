@@ -8,8 +8,8 @@ import { GiConverseShoe } from "react-icons/gi";
 function SectionHeader({ sectionTitle }) {
   return (
     <>
-      <Box>
-        <Text className="fs-1 mb-0 text-black-50 ps-5">{sectionTitle}</Text>
+      <Box className="ms-5">
+        <Text className="fs-5 fw-bold mb-0 pt-3">{sectionTitle}</Text>
       </Box>
     </>
   );

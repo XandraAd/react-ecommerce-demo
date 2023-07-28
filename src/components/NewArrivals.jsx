@@ -2,7 +2,7 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Mousewheel, Navigation } from "swiper";
 import SectionHeader from "./shared/section-header/SectionHeader";
 import ProductCard from "./shared/product-cart/ProductCard";
 import shoeData from "./shoeData";
@@ -10,28 +10,30 @@ import shoeData from "./shoeData";
 const NewArrivals = () => {
   return (
     <>
-      <Box mt={20} className="position-relative">
+      <Box mt={10} className="position-relative">
         <Swiper
           slidesPerView={1.25}
+          mousewheel= {{forceToAxis: true}}
           spaceBetween={100}
           navigation={true}
-          modules={[Navigation]}
+          direction={'horizontal'}
+          modules={[Mousewheel, Navigation]}
           breakpoints={{
             768: {
-              slidesPerView: 1.75,
-            },
-            1024: {
               slidesPerView: 2.25,
             },
-            1300: {
-              slidesPerView: 3.25,
+            1024: {
+              slidesPerView: 3,
+            },
+            1240: {
+              slidesPerView: 3.85,
             },
             1500: {
               slidesPerView: 3.75,
               spaceBetween: -50
             }
           }}
-          className="mySwiper customNavigationTarget py-5 px-5"
+          className="mySwiper customNavigationTarget pt-5 px-5"
         >
           <div className="popular-brands-header">
             <SectionHeader sectionTitle={"New Arrivals"} />
@@ -41,13 +43,13 @@ const NewArrivals = () => {
             <SwiperSlide key={shoe.id}>
             <ProductCard
               imgSrc={shoe.arrivalSrc}
-              cardWidth={"23rem"}
+              cardWidth={"20rem"}
               baseCardWidth={"78vw"}
-              imgHeight={"30rem"}
-              showCardFooter={false}
-              showBorderRadius
+              imgHeight={"25rem"}
+              shoeDescription={shoe.shoeDescription}
               showTransform={true}
               objectFit={"cover"}
+              showShadow={true}
             />
           </SwiperSlide>
           ))}

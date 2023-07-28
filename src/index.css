@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 :root {
-    --text-orange: hsl(26, 100%, 55%);
+    --text-orange: #ff7d1a;
     --bg-orange-50: hsl(25, 100%, 94%);
     --text-white-90: hsl(223, 64%, 98%);
     --text-grey-30: hsl(220, 14%, 75%);
@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Kumbh Sans', sans-serif !important;
-    background-color: rgba(242, 242, 242, 0.722) !important;
+    background-color: rgba(255, 228, 208, 0.124) !important;
 }
 
 .text-orange {
@@ -20,6 +20,10 @@ body {
 
 .bg-orange-50 {
     background-color: var(--bg-orange-50);
+}
+
+.bg-orange-60 {
+    background-color: hsl(26, 100%, 97%);
 }
 
 .bg-orange {
@@ -83,12 +87,13 @@ body {
 
 @media screen and (min-width: 1280px) {
     .customNavigationTarget .swiper-button-prev {
-        left: 90vw;
+        left: 88vw;
     }
 }
 
 .customNavigationTarget .swiper-button-prev::after, .customNavigationTarget .swiper-button-next::after  {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    /* border: 1px solid red; */
 }
 
 .customNavigationTarget .swiper-button-prev:hover, .customNavigationTarget .swiper-button-next:hover  {

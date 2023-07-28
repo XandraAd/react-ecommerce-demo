@@ -6,6 +6,7 @@ const shoeData = [
         shoeDetail: "Nike Airforce One Retro Grey & White 2022",
         arrivalSrc: "/sneaker_images/adidas-black.jpg",
         topLeftPrice: "# " + 150 + ".00",
+        shoeDescription: "Adidas Rough Dark Blue",
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const shoeData = [
         shoeDetail: "All Star Converse Beige with Heart Eyes Custom 2023",
         arrivalSrc: "/sneaker_images/adidas-grey.jpg",
         topLeftPrice: "# " + 90.00 + ".00",
+        shoeDescription: "Adidas Military Runner Grey",
     },
     {
         id: 3,
@@ -22,7 +24,7 @@ const shoeData = [
         shoeDetail: "Vans off the Wall Black and White 2022",
         arrivalSrc: "/sneaker_images/adidas-red.jpg",
         topLeftPrice: "#" + 100.00 + ".00",
-
+        shoeDescription: "Adidas Hu Red",
     },
     {
         id: 4,
@@ -31,7 +33,7 @@ const shoeData = [
         shoeDetail: "All Star Converse Beige with Heart Eyes Custom 2023",
         arrivalSrc: "/sneaker_images/adidas-grey.jpg",
         topLeftPrice: "#" + 90.00 + ".00",
-
+        shoeDescription: "Adidas Military Runner Grey",
     },
     {
         id: 5,
@@ -40,6 +42,7 @@ const shoeData = [
         shoeDetail: "Vans off the Wall Black and White 2022",
         arrivalSrc: "/sneaker_images/adidas-black.jpg",
         topLeftPrice: "#" + 100.00 + ".00",
+        shoeDescription: "Adidas Rough Dark Blue",
     },
     {
         id: 6,
@@ -48,6 +51,7 @@ const shoeData = [
         shoeDetail: "Nike Airforce One Retro Grey & White 2022",
         arrivalSrc: "/sneaker_images/adidas-red.jpg",
         topLeftPrice: "#" + 150.00 + ".00",
+        shoeDescription: "Adidas Hu Red",
     },
     {
         id: 7,
@@ -56,6 +60,7 @@ const shoeData = [
         shoeDetail: "All Star Converse Beige with Heart Eyes Custom 2023",
         arrivalSrc: "/sneaker_images/adidas-grey.jpg",
         topLeftPrice: "#" + 90.00 + ".00",
+        shoeDescription: "Adidas Military Runner Grey",
     },
     {
         id: 8,
@@ -64,6 +69,7 @@ const shoeData = [
         shoeDetail: "Nike Airforce One Retro Grey & White 2022",
         arrivalSrc: "/sneaker_images/adidas-black.jpg",
         topLeftPrice: "#" + 150.00 + ".00",
+        shoeDescription: "Adidas Rough Dark Blue",
     },
     {
         id: 9,
@@ -72,6 +78,7 @@ const shoeData = [
         shoeDetail: "Vans off the Wall Black and White 2022",
         arrivalSrc: "/sneaker_images/adidas-red.jpg",
         topLeftPrice: "#" + 100.00 + ".00",
+        shoeDescription: "Adidas Hu Red",
     },
     
 ]
