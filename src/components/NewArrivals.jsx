@@ -26,6 +26,10 @@ const NewArrivals = () => {
             1300: {
               slidesPerView: 3.25,
             },
+            1500: {
+              slidesPerView: 3.75,
+              spaceBetween: -50
+            }
           }}
           className="mySwiper customNavigationTarget py-5 px-5"
         >
@@ -37,11 +41,13 @@ const NewArrivals = () => {
             <SwiperSlide key={shoe.id}>
             <ProductCard
               imgSrc={shoe.arrivalSrc}
-              cardWidth={"26rem"}
+              cardWidth={"23rem"}
               baseCardWidth={"78vw"}
-              imgHeight={"26rem"}
+              imgHeight={"30rem"}
               showCardFooter={false}
               showBorderRadius
+              showTransform={true}
+              objectFit={"cover"}
             />
           </SwiperSlide>
           ))}

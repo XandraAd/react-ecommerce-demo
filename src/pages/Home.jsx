@@ -8,8 +8,8 @@ function Home() {
   return (
     <>
       <CarouselSection />
-      <Brands />
       <NewArrivals/>
+      <Brands />
     </>
   );
 }

@@ -19,19 +19,29 @@ function ProductCard({
   shoeDetail,
   showHoverBorder,
   showBorder,
-  imgBoxMargin
+  imgBoxMargin,
+  showTransform,
+  objectFit,
+  showPrice,
+  topLeftPrice
 }) {
   return (
     <>
       <Card
         shadow={"none"}
-        _hover={{ cursor: "pointer", border: showHoverBorder ? "2px solid #ff7d1a6b" : "none" }}
-        borderRadius={showBorderRadius ? "xl" : "none"}
-        border= { showBorder ? "2px solid transparent" : "none" }
+        _hover={{
+          cursor: "pointer",
+          border: showHoverBorder ? "2px solid #ff7d1a6b" : "none",
+          transform: showTransform ? "translateY(-1rem)" : "none",
+        }}
+        borderRadius={showBorderRadius ? "2rem" : "none"}
+        border={showBorder ? "2px solid transparent" : "none"}
         overflow={"hidden"}
         position="relative"
         marginBlock="3rem"
-        width={{base: baseCardWidth, md: cardWidth}}
+        width={{ base: baseCardWidth, md: cardWidth }}
+        transition="all 250ms ease-in-out"
+        color="blackAlpha.700"
       >
         <CardBody p={0}>
           <Box height={imgHeight} w="full" mb={imgBoxMargin}>
@@ -40,9 +50,10 @@ function ProductCard({
               alt="/"
               w="full"
               h="full"
-              objectFit="cover"
+              objectFit={objectFit}
               objectPosition={objectPosition}
             />
+            {showPrice && <Text position="absolute" top="1rem" right="1rem" fontSize="sm">{topLeftPrice}</Text>}
           </Box>
           {showBrandText && (
             <>
@@ -53,11 +64,11 @@ function ProductCard({
                 height="4rem"
                 mb="3"
                 px="5"
-                color="blackAlpha.900"
                 fontSize="sm"
               >
-                <span className="text-orange">{shoeBrand}</span><br/>
-                <span className="text-muted">{shoeDetail}</span>
+                <span className="text-orange">{shoeBrand}</span>
+                <br />
+                <span>{shoeDetail}</span>
               </Box>
             </>
           )}

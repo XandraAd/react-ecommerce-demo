@@ -27,11 +27,11 @@ const Brands = () => {
             },
             1300: {
               slidesPerView: 4.25,
-              spaceBetween: 60
+              spaceBetween: -70
             },
             1500: {
-              slidesPerView: 4,
-              spaceBetween: -60
+              slidesPerView: 5,
+              spaceBetween: -20
             }
           }}
           className="mySwiper customNavigationTarget pt-5 px-5"
@@ -48,12 +48,15 @@ const Brands = () => {
               imgSrc={shoe.brandSrc}
               showBrandText={true}
               shoeBrand={shoe.shoeBrand}
-              cardWidth={"19rem"}
+              cardWidth={"17rem"}
+              imgHeight={"15rem"}
               shoeDetail={shoe.shoeDetail}
               showHoverBorder
               showBorder
-              showBorderRadius
               imgBoxMargin={5}
+              objectFit={"contain"}
+              showPrice={true}
+              topLeftPrice={shoe.topLeftPrice}
             />
           </SwiperSlide>
           ))}
