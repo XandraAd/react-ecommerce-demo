@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Checkout from "./pages/Checkout";
 import ProductPage from "./pages/ProductPage";
 import Navigation from "./components/Navigation";
+import Footer from "./components/footer/Footer";
 function App() {
   return (
     <>
@@ -18,6 +19,9 @@ function App() {
               <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </main>
+          <footer>
+            <Footer/>
+          </footer>
         
       </ChakraProvider>
     </>

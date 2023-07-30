@@ -25,7 +25,7 @@ const Brands = () => {
             },
             1024: {
               slidesPerView: 4,
-              spaceBetween: 200,
+              spaceBetween: 40,
               
             },
 
@@ -34,12 +34,13 @@ const Brands = () => {
             },
 
             1440: {
-              slidesPerView: 4.25,
-              spaceBetween: -70
+              slidesPerView: 5.25,
+              spaceBetween: -30
             },
+
             1500: {
-              slidesPerView: 5,
-              spaceBetween: -20
+              slidesPerView: 5.75,
+              spaceBetween: -50
             }
           }}
           className="mySwiper customNavigationTarget pt-5 px-5"

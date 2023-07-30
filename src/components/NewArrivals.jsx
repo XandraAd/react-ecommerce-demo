@@ -24,13 +24,18 @@ const NewArrivals = () => {
             },
             1024: {
               slidesPerView: 3,
+              spaceBetween: 60,
             },
             1240: {
               slidesPerView: 3.85,
             },
+            1440: {
+              slidesPerView: 4.25,
+              spaceBetween: 60,
+            },
             1500: {
-              slidesPerView: 3.75,
-              spaceBetween: -50
+              slidesPerView: 4.75,
+              spaceBetween: 90,
             }
           }}
           className="mySwiper customNavigationTarget pt-5 px-5"
