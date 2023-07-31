@@ -4,34 +4,43 @@ import { Box, Container } from "@chakra-ui/react";
 import ProductCard from "../components/shared/product-cart/ProductCard";
 import SectionHeader from "./shared/section-header/SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Mousewheel, Navigation } from "swiper";
 import shoeData from "./shoeData";
 
 
 const Brands = () => {
   return (
     <>
-      <Box mt={12} className="position-relative">
+      <Box mt={5} className="position-relative">
         <Swiper
           slidesPerView={1}
           spaceBetween={15}
           navigation={true}
-          modules={[Navigation]}
+          modules={[Mousewheel, Navigation]}
+          mousewheel= {{forceToAxis: true}}
           breakpoints={{
             768: {
               slidesPerView: 2.25,
               spaceBetween: 50,
             },
             1024: {
-              slidesPerView: 2.75,
-            },
-            1300: {
-              slidesPerView: 4.25,
-              spaceBetween: 60
-            },
-            1500: {
               slidesPerView: 4,
-              spaceBetween: -60
+              spaceBetween: 40,
+              
+            },
+
+            1240: {
+              slidesPerView: 4.5
+            },
+
+            1440: {
+              slidesPerView: 5.25,
+              spaceBetween: -30
+            },
+
+            1500: {
+              slidesPerView: 5.75,
+              spaceBetween: -50
             }
           }}
           className="mySwiper customNavigationTarget pt-5 px-5"
@@ -48,12 +57,14 @@ const Brands = () => {
               imgSrc={shoe.brandSrc}
               showBrandText={true}
               shoeBrand={shoe.shoeBrand}
-              cardWidth={"19rem"}
+              cardWidth={"14.5rem"}
+              imgHeight={"16rem"}
               shoeDetail={shoe.shoeDetail}
               showHoverBorder
               showBorder
-              showBorderRadius
-              imgBoxMargin={5}
+              objectFit={"contain"}
+              showPrice={true}
+              showShadow={true}
             />
           </SwiperSlide>
           ))}

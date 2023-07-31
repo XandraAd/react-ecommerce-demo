@@ -19,52 +19,49 @@ function ProductCard({
   shoeDetail,
   showHoverBorder,
   showBorder,
-  imgBoxMargin
+  imgBoxMargin,
+  showTransform,
+  objectFit,
+  showPrice,
+  topLeftPrice,
+  showShadow,
 }) {
   return (
     <>
       <Card
         shadow={"none"}
-        _hover={{ cursor: "pointer", border: showHoverBorder ? "2px solid #ff7d1a6b" : "none" }}
-        borderRadius={showBorderRadius ? "xl" : "none"}
-        border= { showBorder ? "2px solid transparent" : "none" }
+        _hover={{
+          cursor: "pointer",
+          transform: showTransform ? "translateY(-1rem)" : "none",
+          shadow: "3px 3px 5px 2px rgba(255,125,26,0.10)",
+          boxShadow: showShadow ? "3px 3px 5px 2px rgba(255,125,26,0.10)" : "none"
+        }}
+        borderRadius={showBorderRadius ? "2rem" : "none"}
         overflow={"hidden"}
         position="relative"
-        marginBlock="3rem"
-        width={{base: baseCardWidth, md: cardWidth}}
+        marginBlock="1rem"
+        width={{ base: baseCardWidth, md: cardWidth }}
+        transition="all 250ms ease-in-out"
+        color="blackAlpha.700"
+        backgroundColor={"transparent"}
         
       >
-        <CardBody p={0}>
-          <Box height={imgHeight} w="full" mb={imgBoxMargin}>
+        <CardBody p={0} bg={"whiteAlpha.900"} mb={0}>
+          <Box height={imgHeight} w="full">
             <Image
               src={imgSrc}
               alt="/"
               w="full"
               h="full"
-              objectFit="cover"
+              objectFit={objectFit}
               objectPosition={objectPosition}
             />
+            {showPrice && <Text position="absolute" top="1rem" right="1rem" fontSize="sm">{topLeftPrice}</Text>}
           </Box>
-          {showBrandText && (
-            <>
-              <Box
-                position="absolute"
-                bottom="0"
-                w="full"
-                height="4rem"
-                mb="3"
-                px="5"
-                color="blackAlpha.900"
-                fontSize="sm"
-              >
-                <span className="text-orange">{shoeBrand}</span><br/>
-                <span className="text-muted">{shoeDetail}</span>
-              </Box>
-            </>
-          )}
+          
         </CardBody>
         {showCardFooter && (
-          <CardFooter pl={4} pb={0} className="d-block">
+          <CardFooter pl={4} pt={2} pb={1} className="d-block bg-transparent">
             <div className=" d-flex gap-2 fw-bold">
               <Text fontSize={"md"} mb={0}>
                 {newPrice}
@@ -77,9 +74,24 @@ function ProductCard({
                 {oldPrice}
               </Text>
             </div>
-            <Text className="text-grey-50 mt-1" fontSize={"sm"}>
+            <Text className="text-black-90 mt-1" fontSize={"sm"}>
               {shoeDescription}
             </Text>
+            {showBrandText && (
+            <>
+              <Box
+                w="full"
+                height="4.5rem"
+                mb="3"
+                px="1"
+                fontSize="sm"
+              >
+                <span className="text-orange fs-6">{shoeBrand}</span>
+                <br />
+                <span className="text-black-90">{shoeDetail}</span>
+              </Box>
+            </>
+          )}
           </CardFooter>
         )}
       </Card>
