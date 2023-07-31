@@ -32,6 +32,7 @@ function ProductCard({
         position="relative"
         marginBlock="3rem"
         width={{base: baseCardWidth, md: cardWidth}}
+        
       >
         <CardBody p={0}>
           <Box height={imgHeight} w="full" mb={imgBoxMargin}>

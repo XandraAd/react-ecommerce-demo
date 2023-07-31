@@ -64,6 +64,11 @@ body {
     left: 0;
 }
 
+.mens-adidas-brands {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
 .customNavigationTarget .swiper-button-prev, .customNavigationTarget .swiper-button-next  {
     top: 0%;
     width: fit-content;

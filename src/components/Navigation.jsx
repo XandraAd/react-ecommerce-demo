@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import iconCart from "../assets/icon-cart.svg";
 import ImageAvatar from "../assets/image-avatar.png";
-import { Badge, Box, Image } from "@chakra-ui/react";
+import { Badge, Image } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 
 function Navigation() {
@@ -66,10 +66,10 @@ function Navigation() {
               <Nav.Link>
                 <small>Collections</small>
               </Nav.Link>
-              <Nav.Link>
+              <Nav.Link as={Link} to="/men">
                 <small>Men</small>
               </Nav.Link>
-              <Nav.Link>
+              <Nav.Link as={Link} to="/women">
                 <small>Women</small>
               </Nav.Link>
               <Nav.Link>
