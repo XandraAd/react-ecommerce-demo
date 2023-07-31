@@ -23,16 +23,6 @@ function App() {
             <Route path="/women" element={<Women />}/>
           </Routes>
         </main>
-          <header>
-            <Navigation />
-          </header>
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/product-page" element={<ProductPage />} />
-              <Route path="/checkout" element={<Checkout />} />
-            </Routes>
-          </main>
           <footer>
             <Footer/>
           </footer>

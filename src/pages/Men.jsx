@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import ProductCard from "../components/shared/product-cart/ProductCard";
 import SectionHeader from "../components/shared/section-header/SectionHeader";
-import shoeData from "../components/shoeData";
+
 import mensData from "../components/MensData";
 
 const Men = () => {
