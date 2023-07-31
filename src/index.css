@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 :root {
-    --text-orange: #ff7d1a;
+    --text-orange: hsl(26, 100%, 55%);
     --bg-orange-50: hsl(25, 100%, 94%);
     --text-white-90: hsl(223, 64%, 98%);
     --text-grey-30: hsl(220, 14%, 75%);
@@ -10,20 +10,15 @@
 
 body {
     font-family: 'Kumbh Sans', sans-serif !important;
-    background-color: rgba(255, 228, 208, 0.124) !important;
+    background-color: rgba(242, 242, 242, 0.722) !important;
 }
 
 .text-orange {
-    color: var(--text-orange);
-    
+    color: var(--text-orange)
 }
 
 .bg-orange-50 {
     background-color: var(--bg-orange-50);
-}
-
-.bg-orange-60 {
-    background-color: hsl(26, 100%, 97%);
 }
 
 .bg-orange {
@@ -82,27 +77,11 @@ body {
     padding: 10px 16px;
 }
 
-.customNavigationTarget .swiper-button-next {
-    right: 3.5rem;
-}
-
 .customNavigationTarget .swiper-button-prev {
-    left: 85vw;
+    left: 90% !important;
 }
-
-.footer-anchor:hover {
-    color: var(--text-orange) !important;
-}
-
-@media screen and (min-width: 1280px) {
-    .customNavigationTarget .swiper-button-prev {
-        left: 88vw;
-    }
-}
-
 .customNavigationTarget .swiper-button-prev::after, .customNavigationTarget .swiper-button-next::after  {
-    font-size: 1rem;
-    /* border: 1px solid red; */
+    font-size: 1.25rem;
 }
 
 .customNavigationTarget .swiper-button-prev:hover, .customNavigationTarget .swiper-button-next:hover  {
@@ -111,7 +90,7 @@ body {
     border-radius: 50%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .customNavigationTarget .swiper-button-prev, .customNavigationTarget .swiper-button-next {
         display: none!important
     }

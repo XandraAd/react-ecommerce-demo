@@ -2,7 +2,7 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import NikeRed from "/sneaker_images/carouselImages/nike.jpg";
+import NikeRed from "/sneaker_images/carouselImages/nike-red.jpg";
 import Converse from "/sneaker_images/carouselImages/converse.jpg";
 import Jordan from "/sneaker_images/carouselImages/jordans-nude.jpg";
 import NewBalance from "/sneaker_images/carouselImages/newbalance.jpg";
@@ -15,10 +15,10 @@ const CarouselSection = () => {
         <Box w={{ lg: "50vw" }}>
           <Carousel autoPlay infiniteLoop showThumbs={false} showArrows={false} showIndicators={false}>
             <Box>
-              <Image src={NewBalance} alt="/" h="full"/>
+              <Image src={NikeRed} alt=""/>
             </Box>
             <Box>
-              <Image src={NikeRed} alt=""/>
+              <Image src={NewBalance} alt="/" h="full"/>
             </Box>
           </Carousel>
         </Box>
@@ -30,6 +30,9 @@ const CarouselSection = () => {
             <Box>
               <Image src={Converse} alt=""/>
             </Box>
+            {/* <Box>
+              <Image src={NikeRed} alt=""/>
+            </Box> */}
           </Carousel>
         </Box>
     </Flex>

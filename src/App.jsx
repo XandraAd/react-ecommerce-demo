@@ -6,7 +6,6 @@ import Men from "./pages/Men";
 import Women from "./pages/Women";
 import ProductPage from "./pages/ProductPage";
 import Navigation from "./components/Navigation";
-import Footer from "./components/footer/Footer";
 function App() {
   return (
     <>
@@ -23,20 +22,6 @@ function App() {
             <Route path="/women" element={<Women />}/>
           </Routes>
         </main>
-          <header>
-            <Navigation />
-          </header>
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/product-page" element={<ProductPage />} />
-              <Route path="/checkout" element={<Checkout />} />
-            </Routes>
-          </main>
-          <footer>
-            <Footer/>
-          </footer>
-        
       </ChakraProvider>
     </>
   );
