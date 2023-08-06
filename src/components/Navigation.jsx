@@ -63,7 +63,7 @@ function Navigation() {
           </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>
+              <Nav.Link as={Link} to="/collections">
                 <small>Collections</small>
               </Nav.Link>
               <Nav.Link as={Link} to="/men">
@@ -72,10 +72,10 @@ function Navigation() {
               <Nav.Link as={Link} to="/women">
                 <small>Women</small>
               </Nav.Link>
-              <Nav.Link>
+              <Nav.Link as={Link} to="/about">
                 <small>About</small>
               </Nav.Link>
-              <Nav.Link>
+              <Nav.Link as={Link} to="/contact">
                 <small>Contact</small>
               </Nav.Link>
             </Nav>
