@@ -6,6 +6,8 @@
     --text-grey-30: hsl(220, 14%, 75%);
     --text-grey-50: hsl(219, 9%, 45%);
     --text-black-90: hsl(220, 13%, 13%);
+    --text-white:       hsl(0,0%,100%);
+
 }
 
 body {
@@ -69,10 +71,55 @@ body {
     left: 0;
 }
 
+.collection_section_headers {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 2rem;
+}
+
 .mens-adidas-brands {
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
+
+
+.contactForm {
+    width: 450px; /* Set the width of the form */
+   
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(234, 115, 5, 0.755); /* Add a box shadow */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: var(--text-white); /* Set a white background color */
+  }
+  
+  /* Optional: Adjust styles for labels and inputs */
+  .contactForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--bg-orange-50);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .contactForm button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; 
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
 
 .customNavigationTarget .swiper-button-prev, .customNavigationTarget .swiper-button-next  {
     top: 0%;

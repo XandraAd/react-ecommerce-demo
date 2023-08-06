@@ -39,7 +39,7 @@ const mensData = [
     mensBrand: "Adidas",
     mensDetail: "Racer Falcon 3.0 Mens Trainers",
     arrivalSrc: "/sneaker_images/adidas-black.jpg",
-    adidasSrc: "/src/assets/MensSneakers/Racer Falcon 3,o Mens Trainers.jpg",
+    adidasSrc: "/src/assets/MensSneakers/Racer Falcon 3.0 Mens Trainers.jpg",
   },
   {
     id: 6,
@@ -86,7 +86,7 @@ const mensData = [
     mensBrand: "Adidas",
     mensDetail: "Racer Falcon 3.0 Mens Trainers",
     arrivalSrc: "/sneaker_images/adidas-black.jpg",
-    adidasSrc: "/src/assets/MensSneakers/Racer Falcon 3,o Mens Trainers.jpg",
+    adidasSrc: "/src/assets/MensSneakers/Racer Falcon 3.0 Mens Trainers.jpg",
   },
   {
     id: 12,
